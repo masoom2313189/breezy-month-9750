@@ -1,0 +1,47 @@
+.home>div{
+    margin-bottom: 2rem;
+}
+
+
+.image_text{
+    position: absolute;
+    top: 80rem;
+    padding: 4rem;
+    width: 50%;
+    padding-top: 10rem;
+}
+
+
+.video_text{
+    position: absolute;
+    top: 3rem;
+    padding: 15rem;
+    width: 100%;
+    margin: auto;
+}
+
+.button_main{
+    border-radius : none;
+    color : black;
+    font-weight : 300;
+    height : 50px;
+    background-color: white;
+    width: 220px;
+    border-color: white;
+}
+
+.slider{
+    width: 340px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.slider:hover{
+    color: gray;
+}
+
+.slider_text{
+    position: absolute;
+    top: 21rem;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
