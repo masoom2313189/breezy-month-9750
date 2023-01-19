@@ -11,9 +11,13 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 function Navbar() {
+  const handleHome = () => {
+    return <Navigate to="/" />
+  };
+
   return (
     <div>
       <div>
@@ -32,6 +36,8 @@ function Navbar() {
             src="http://ctshirts-us.custhelp.com/euf/assets/themes/standard/custom/img/ct-logo.svg"
             width={"320px"}
             marginLeft="250px"
+            onClick={handleHome}
+            cursor="pointer"
           />
           <Box display={"flex"} gap={"10"}>
             <InputGroup>

@@ -1,0 +1,47 @@
+.footer > div{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.first_input{
+    background-color: rgba(128, 128, 128, 0.122);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.footer_main{
+width: 60%;
+margin: auto;
+text-align: start;
+display: flex;
+justify-content: space-between;
+padding-bottom: 1rem;
+border-bottom: 1px solid rgba(128, 128, 128, 0.122);
+}
+
+.second{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.122);
+}
+
+.second_div{
+    width: 20%;
+    display: flex;
+    margin: auto;
+}
+
+.last{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.122);
+   
+}
+
+.end{
+    width: 60%;
+    margin: auto;
+
+}

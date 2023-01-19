@@ -30,6 +30,10 @@
     border-color: white;
 }
 
+.button_main:hover{
+  font-weight: bold;
+}
+
 .slider{
     width: 340px;
     padding-left: 10px;
@@ -44,4 +48,95 @@
     top: 21rem;
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_rating{
+background-color: rgba(128, 128, 128, 0.122);
+padding: 3rem;
+}
+
+.rating{
+    display: flex;
+    width: 75%;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.093);
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.rating_slider{
+    width: 80%;
+    margin: auto;
+}
+
+.first_image_text{
+    position: absolute;
+    top: 195rem;
+    padding: 2rem;
+    width: 45%;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    color: white;
+}
+
+
+.image_button{
+    border-radius : none;
+    color : white;
+    font-weight : 300;
+    height : 50px;
+    background-color: transparent;
+    width: 220px;
+    border-color: white;
+    border: 1px solid white;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.image_button:hover{
+    color: black;
+    background-color: white;
+}
+
+.box_div{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(128, 128, 128, 0.122);
+    padding: 2rem;
+}
+
+.second_image_text{
+    position: absolute;
+    top: 265rem;
+    padding: 2rem;
+    width: 45%;
+    margin: auto;
+    display: inline;
+    color: white;
+}
+
+.last_image{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 4rem;
+    background-color: rgba(128, 128, 128, 0.122);
+}
+
+.last_button{
+    border-radius : none;
+    color : white;
+    font-weight : 300;
+    height : 50px;
+    background-color:#001f49;
+    width: 350px;
+    border-color: white;
+    border: 1px solid white;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
 }
