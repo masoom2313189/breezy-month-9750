@@ -1,7 +1,7 @@
 import { Text, Box, Image, Button } from "@chakra-ui/react";
 import React from "react";
 import styles from "../Styles/Home.module.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -16,6 +16,11 @@ import "swiper/css/scrollbar";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 
 function Home() {
+
+  const handleClick = () => {
+  return <Navigate to="/products"/>
+  }
+
   return (
     <div className={styles.home}>
       {/* Video Start */}
@@ -189,7 +194,7 @@ function Home() {
                 width={"20"}
               />
             </Box>
-            <button className={styles.button_main}>SHOP THE COLLECTION</button>
+            <button onClick={handleClick} className={styles.button_main}>SHOP THE COLLECTION</button>
           </Box>
         </Box>
       </div>
