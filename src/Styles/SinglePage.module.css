@@ -1,0 +1,41 @@
+.main{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    gap: 4rem;
+}
+.main_div{
+    width: 40%;
+    text-align: start;
+
+}
+
+.main_first{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.color_image{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 1rem 0 2rem 0;
+}
+
+.button_first{
+    width: 100%;
+    background-color:teal;
+    padding: 1rem;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.button_second{
+    width: 100%;
+    background-color:white;
+    padding: 1rem;
+    font-size: 20px;
+    color: black;
+    border: 1px solid black;
+}

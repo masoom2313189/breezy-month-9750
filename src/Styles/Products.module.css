@@ -1,0 +1,45 @@
+.products > div{
+    padding-bottom: 2rem;
+}
+
+.grid{
+    width: 70%;
+    margin: auto;
+   text-align: start;
+
+}
+.box{
+    padding: 2rem;
+    background-color: rgba(128, 128, 128, 0.122);
+    margin-bottom: 1rem;
+}
+
+.box_box{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+   
+}
+
+.explore{
+    font-size: x-large;
+    font-weight: bold;
+    padding: 1.5rem;
+    background-color: rgba(128, 128, 128, 0.122);
+}
+
+.box_grid{
+    width: 70%;
+    margin: auto;
+
+}
+
+.image{
+    display: flex;
+    gap: 10px;
+    background-color: rgba(128, 128, 128, 0.122);
+    padding: 1rem;
+    margin-top: 2rem;
+}

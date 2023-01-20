@@ -11,13 +11,9 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-import { Link, Navigate } from "react-router-dom";
+import { Link as RouterLink, Navigate } from "react-router-dom";
 
 function Navbar() {
-  const handleHome = () => {
-    return <Navigate to="/" />
-  };
-
   return (
     <div>
       <div>
@@ -32,13 +28,13 @@ function Navbar() {
             <FmdGoodOutlinedIcon />
             <PersonOutlineOutlinedIcon />
           </Box>
-          <Image
-            src="http://ctshirts-us.custhelp.com/euf/assets/themes/standard/custom/img/ct-logo.svg"
-            width={"320px"}
-            marginLeft="250px"
-            onClick={handleHome}
-            cursor="pointer"
-          />
+          <RouterLink to={"/"}>
+            <Image
+              src="http://ctshirts-us.custhelp.com/euf/assets/themes/standard/custom/img/ct-logo.svg"
+              width={"320px"}
+              marginLeft="250px"
+            />
+          </RouterLink>
           <Box display={"flex"} gap={"10"}>
             <InputGroup>
               <Input width="300px" placeholder="Search" />
@@ -51,39 +47,39 @@ function Navbar() {
           <div className={styles.wrapper}>
             <ul className={styles.nav_links}>
               <li>
-                <Link to="#">SHIRTS</Link>
+                <RouterLink>SHIRTS</RouterLink>
                 <div className={styles.box_new}>
                   <div className={styles.content}>
                     <div className={styles.row}>
                       <header>STYLE</header>
                       <ul className={styles.box_links}>
                         <li>
-                          <Link>DRESS</Link>
+                          <RouterLink>DRESS</RouterLink>
                         </li>
                         <li>
-                          <Link>DRESS</Link>
+                          <RouterLink>DRESS</RouterLink>
                         </li>
                         <li>
-                          <Link>DRESS</Link>
+                          <RouterLink>DRESS</RouterLink>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <Link to="#">SHIRTS</Link>
+                <RouterLink>SHIRTS</RouterLink>
                 <div className={styles.box_new}>
                   <div className={styles.content}>
                     <div className={styles.row}>
                       <header>STYLE</header>
                       <ul className={styles.box_links}>
                         <li>
-                          <Link>DRESS</Link>
+                          <RouterLink>DRESS</RouterLink>
                         </li>
                         <li>
-                          <Link>DRESS</Link>
+                          <RouterLink>DRESS</RouterLink>
                         </li>
                         <li>
-                          <Link>DRESS</Link>
+                          <RouterLink>DRESS</RouterLink>
                         </li>
                       </ul>
                     </div>

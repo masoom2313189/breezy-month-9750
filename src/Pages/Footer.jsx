@@ -23,7 +23,7 @@ function Footer() {
           <InputGroup>
             <Input
               border={"1px solid black"}
-              color="white"
+              color="black"
               placeholder="Email Address"
               width={"300px"}
               borderRadius="none"
@@ -39,43 +39,51 @@ function Footer() {
       <div className={styles.footer_main}>
         <Box>
           <Text fontWeight={"bold"}>HELP</Text>
-          <Text>FAQS</Text>
-          <Text>SHIPPING</Text>
-          <Text>RETURNS</Text>
-          <Text>SIZE GUIDES</Text>
-          <Text>SHIRT MULTIBUY</Text>
-          <Text>FIND A STORE</Text>
-          <Text>CONTACT US</Text>
-          <Text>WHERE IS MY ORDER?</Text>
+          <Box fontWeight={"light"}>
+            <Text>FAQS</Text>
+            <Text>SHIPPING</Text>
+            <Text>RETURNS</Text>
+            <Text>SIZE GUIDES</Text>
+            <Text>SHIRT MULTIBUY</Text>
+            <Text>FIND A STORE</Text>
+            <Text>CONTACT US</Text>
+            <Text>WHERE IS MY ORDER?</Text>
+          </Box>
         </Box>
         <Box>
           <Text fontWeight={"bold"}>LEGAL</Text>
-          <Text>TERMS AND CONDITIONS</Text>
-          <Text>PRIVACY POLICY</Text>
-          <Text>OUR COOKIE POLICY</Text>
-          <Text>ACCESSIBILITY STATEMENT</Text>
-          <Text>ETHICAL TRADING POLICY</Text>
-          <Text>MODERN SLAVERY STATEMENT</Text>
-          <Text>INCLUSIVE WORKING STATEMENT</Text>
-          <Text>MY PERSONAL INFORMATION</Text>
+          <Box fontWeight={"light"}>
+            <Text>TERMS AND CONDITIONS</Text>
+            <Text>PRIVACY POLICY</Text>
+            <Text>OUR COOKIE POLICY</Text>
+            <Text>ACCESSIBILITY STATEMENT</Text>
+            <Text>ETHICAL TRADING POLICY</Text>
+            <Text>MODERN SLAVERY STATEMENT</Text>
+            <Text>INCLUSIVE WORKING STATEMENT</Text>
+            <Text>MY PERSONAL INFORMATION</Text>
+          </Box>
         </Box>
         <Box>
           <Text fontWeight={"bold"}>MORE INFO</Text>
-          <Text>ABOUT US</Text>
-          <Text>CUSTOM SHIRTS</Text>
-          <Text>GIFT VOUCHERS</Text>
-          <Text>WHOLESALE PARTNERSHIPS</Text>
-          <Text>COUPON CODES</Text>
-          <Text>REQUEST A CATALOGUE</Text>
-          <Text>DOING THINGS PROPERLY</Text>
+          <Box fontWeight={"light"}>
+            <Text>ABOUT US</Text>
+            <Text>CUSTOM SHIRTS</Text>
+            <Text>GIFT VOUCHERS</Text>
+            <Text>WHOLESALE PARTNERSHIPS</Text>
+            <Text>COUPON CODES</Text>
+            <Text>REQUEST A CATALOGUE</Text>
+            <Text>DOING THINGS PROPERLY</Text>
+          </Box>
         </Box>
         <Box>
           <Text fontWeight={"bold"}>CAREERS</Text>
-          <Text>UK VACANCIES</Text>
-          <Text>US VACANCIES</Text>
-          <Text>OUR BELIEFS</Text>
-          <Text>OUR BENEFITS</Text>
-          <Text>OUR PEOPLE</Text>
+          <Box fontWeight={"light"}>
+            <Text>UK VACANCIES</Text>
+            <Text>US VACANCIES</Text>
+            <Text>OUR BELIEFS</Text>
+            <Text>OUR BENEFITS</Text>
+            <Text>OUR PEOPLE</Text>
+          </Box>
           <Box>
             <FacebookIcon />
             <InstagramIcon />
@@ -127,10 +135,16 @@ function Footer() {
           />
         </Box>
       </div>
-      <div className={styles.end} >
-        <Box display={"flex"} justifyContent="space-between" marginBottom={"1rem"}>
+      <div className={styles.end}>
+        <Box
+          display={"flex"}
+          justifyContent="space-between"
+          marginBottom={"1rem"}
+        >
           <Text fontSize={"x-small"}>© 2022 Charles Tyrwhitt Shirts Ltd.</Text>
-          <Text fontSize={"x-small"}>All products are imported into the US.</Text>
+          <Text fontSize={"x-small"}>
+            All products are imported into the US.
+          </Text>
         </Box>
         <Box display={"flex"} justifyContent="space-between">
           <Text fontSize={"sm"}>USDDEFAULT</Text>
