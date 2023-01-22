@@ -39,3 +39,22 @@
     color: black;
     border: 1px solid black;
 }
+
+.button_bag{
+    width: 100%;
+    background-color:#001f49;
+    padding: 1rem;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.button_last{
+    width: 100%;
+    background-color:transparent;
+    padding: 1rem;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+}

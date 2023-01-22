@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styles from "../Styles/Signup.module.css";
 import { Image, Box, Text, Select, Checkbox } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
-import { CheckBox } from "@mui/icons-material";
+import { Link as RouterLink, Navigate } from "react-router-dom";
+
 import axios from "axios";
 
 function SignUp() {
+  const [users, setUsers] = useState([]);
+
   const [form, setForm] = useState({
     title: "",
     first_name: "",
@@ -20,16 +22,32 @@ function SignUp() {
     setForm({ ...form, [name]: value });
   };
 
-  const payload = {
-    title: "",
-    first_name: "",
-  };
+  const handleSubmit = (e) => {
+    if (!title || !first_name || !last_name || !email || !password || !phone) {
+      alert("Please Enter Valid Data");
+      return;
+    }
 
-  const handleSubmit = (e, body) => {
+    if (email === users.email || phone === users.phone) {
+      alert("User Already Exists");
+      return;
+    }
+
+    const payload = {
+      ...form,
+    };
+
     e.preventDefault();
-    axios.post("http://localhost:8080/users", body).then((res) => {
-      console.log(res);
-    });
+    axios
+      .post("http://localhost:8080/users", payload)
+      .then((res) => {
+        setUsers(res.data);
+        alert("User Added");
+        <Navigate to={"/login"}></Navigate>;
+      })
+      .catch((err) => {
+        console.log("Error");
+      });
     console.log({ ...form });
   };
 

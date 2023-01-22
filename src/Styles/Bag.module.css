@@ -1,0 +1,19 @@
+.main{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.second{
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+}
+
+.last{
+    width: 20%;
+    margin: auto;
+    margin-bottom: 5rem;
+}

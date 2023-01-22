@@ -1,13 +1,22 @@
 {
   "users": [
     {
+      "title": "MR",
+      "first_name": "Masoom",
+      "last_name": "Rizvi",
+      "email": "masoom2313189@gmail.com",
+      "password": "1234",
+      "phone": "6205410891",
       "id": 1
     },
     {
+      "title": "MR",
+      "first_name": "Masoom",
+      "last_name": "Rizvi",
+      "email": "masoom2313189@gmail.com",
+      "password": "1234",
+      "phone": "6205410891",
       "id": 2
-    },
-    {
-      "id": 3
     }
   ],
   "products": [

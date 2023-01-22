@@ -1,9 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../Styles/Login.module.css";
 import { Image, Box, Text } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
+  const [users, setUsers] = useState([]);
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+    phone: "",
+  });
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const getData = () => {
+    axios
+      .get("http://localhost:8080/users")
+      .then((res) => {
+        console.log(res.data);
+        setUsers(res.data);
+        if (email === res.data.email && password === res.data.password) {
+          alert("Login Successfully");
+        }
+      })
+      .catch((err) => {
+        console.log("Error");
+      });
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    getData();
+
+    if (!email || !password) {
+      alert("Invalid Details");
+    }
+  };
+
+  const { email, password, phone } = form;
+
   return (
     <div className={styles.main}>
       <Text
@@ -18,14 +57,27 @@ function Login() {
         <div className={styles.login_first}>
           <form action="">
             <p>Email address</p>
-            <input style={{ marginBottom: "1rem" }} type="text" />
+            <input
+              name="email"
+              value={email}
+              onChange={handleChange}
+              style={{ marginBottom: "1rem" }}
+              type="text"
+            />
             <p>Password</p>
-            <input type="text" />
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
+            />
             <RouterLink>
               <p>Forgotten your password?</p>
             </RouterLink>
 
-            <button className={styles.button_login}>LOG IN</button>
+            <button onClick={handleLogin} className={styles.button_login}>
+              LOG IN
+            </button>
           </form>
         </div>
         <div>

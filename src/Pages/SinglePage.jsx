@@ -2,13 +2,27 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styles from "../Styles/SinglePage.module.css";
-import { Image, Box, Text } from "@chakra-ui/react";
+import {
+  Image,
+  Box,
+  Text,
+  useDisclosure,
+  ModalOverlay,
+  Button,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  Modal,
+  ModalBody,
+  ModalFooter,
+} from "@chakra-ui/react";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import { Link as RouterLink } from "react-router-dom";
 
 function SinglePage() {
   const [data, setData] = useState([]);
   const { id } = useParams();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const getData = () => {
     return axios.get(`http://localhost:8080/products/${id}`);
@@ -137,8 +151,42 @@ function SinglePage() {
                 />
               </RouterLink>
             </Box>
-            <button className={styles.button_first}>ADD TO BAG</button>
-            <button className={styles.button_second}>NEW - BUILD A CUSTOM SHIRT</button>
+            <button onClick={onOpen} className={styles.button_first}>
+              ADD TO BAG
+            </button>
+
+            <Modal onClose={onClose} isOpen={isOpen} isCentered>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>ADDED TO BAG</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Box display={"flex"} gap="20px">
+                    <Image width={"200px"} src={data.img1} />
+                    <Box margin={"auto"}>
+                      <Text fontWeight={"bold"} color={"green"}>
+                        1 x Added{" "}
+                      </Text>
+                      <Text marginBottom={"2rem"} fontSize={"small"}>
+                        {data.name}
+                      </Text>
+                      <Text>${data.price}</Text>
+                    </Box>
+                  </Box>
+                </ModalBody>
+                <ModalFooter display={"block"}>
+                  <RouterLink to={"/shoping-bag"}>
+                    <button className={styles.button_bag}>GO TO BAG</button>
+                  </RouterLink>
+                  <button onClick={onClose} className={styles.button_last}>
+                    CONTINUE SHOPING
+                  </button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+            <button className={styles.button_second}>
+              NEW - BUILD A CUSTOM SHIRT
+            </button>
           </Box>
         </Box>
       </div>
