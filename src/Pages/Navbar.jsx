@@ -11,12 +11,12 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-import { Link as RouterLink, Navigate } from "react-router-dom";
+import { Link as RouterLink,  } from "react-router-dom";
 
 function Navbar() {
   return (
     <div>
-      <div>
+      <div className={styles.header}>
         <Box
           w="90%"
           margin="auto"
@@ -25,8 +25,12 @@ function Navbar() {
           padding={"5"}
         >
           <Box display={"flex"} gap={"10"}>
-            <FmdGoodOutlinedIcon />
-            <PersonOutlineOutlinedIcon />
+            <RouterLink to={"/locations"}>
+              <FmdGoodOutlinedIcon sx={{ fontSize: 35 }} />
+            </RouterLink>
+            <RouterLink to={"/login"}>
+              <PersonOutlineOutlinedIcon sx={{ fontSize: 35 }} />
+            </RouterLink>
           </Box>
           <RouterLink to={"/"}>
             <Image
@@ -40,7 +44,9 @@ function Navbar() {
               <Input width="300px" placeholder="Search" />
               <InputRightAddon children={<SearchOutlinedIcon />} />
             </InputGroup>
-            <WorkOutlineOutlinedIcon />
+            <RouterLink to={"/shoping-bag"}>
+              <WorkOutlineOutlinedIcon sx={{ fontSize: 35 }} />
+            </RouterLink>
           </Box>
         </Box>
         <div>
